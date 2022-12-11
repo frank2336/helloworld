@@ -27,29 +27,44 @@ int main()
 {
     string s1, s2;
     cin >> s1 >> s2;
-    bool neg;
     int lena, lenb, lenc;
     
-    neg = cmp(s1, s2);
+    /*
+     bool neg;
+     neg = cmp(s1, s2);
+     
+     if (neg) {
+     lena = s2.size();
+     for (int i=0; i<lena; i++) {
+     a[i] = s2[lena-i-1] - '0';
+     }
+     lenb = s1.size();
+     for (int i=0; i<lenb; i++) {
+     b[i] = s1[lenb-i-1] - '0';
+     }
+     } else {
+     lena = s1.size();
+     for (int i=0; i<lena; i++) {
+     a[i] = s1[lena-i-1] - '0';
+     }
+     lenb = s2.size();
+     for (int i=0; i<lenb; i++) {
+     b[i] = s2[lenb-i-1] - '0';
+     }
+     }
+     */
     
-    if (neg) {
-        lena = s2.size();
-        for (int i=0; i<lena; i++) {
-            a[i] = s2[lena-i-1] - '0';
-        }
-        lenb = s1.size();
-        for (int i=0; i<lenb; i++) {
-            b[i] = s1[lenb-i-1] - '0';
-        }
-    } else {
-        lena = s1.size();
-        for (int i=0; i<lena; i++) {
-            a[i] = s1[lena-i-1] - '0';
-        }
-        lenb = s2.size();
-        for (int i=0; i<lenb; i++) {
-            b[i] = s2[lenb-i-1] - '0';
-        }
+    if (cmp(s1, s2)) {
+        swap(s1, s2);
+        cout << "-";
+    }
+    lena = s1.size();
+    for (int i=0; i<lena; i++) {
+        a[i] = s1[lena-i-1] - '0';
+    }
+    lenb = s2.size();
+    for (int i=0; i<lenb; i++) {
+        b[i] = s2[lenb-i-1] - '0';
     }
     
     lenc = lena;
@@ -63,10 +78,11 @@ int main()
     }
     
     while (lenc>0 && c[lenc-1] == 0) lenc --;
-    
-    if (neg) {
-        cout << "-";
-    }
+    /*
+     if (neg) {
+     cout << "-";
+     }
+     */
     for (int i=0; i<lenc; i++) {
         cout << c[lenc -i -1];
     }
