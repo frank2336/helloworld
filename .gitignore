@@ -3,3 +3,7 @@
 *.out
 *.o
 *.plist
+build/.DS_Store
+dynamic_programming/build/Debug/outDebug
+
+build/Debug/outDebug
