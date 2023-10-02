@@ -66,3 +66,31 @@ $dp[i][j] = max(dp[i+1][j], dp[i+1][j+1]) + f[i][j]$
 把dp[i][j]称为问题的状态，公式称为状态转移方程，它把状态dp[i][j]转移为dp[i+1][j]和dp[i+1][j+1]。可以发现，状态dp[i][j]只与第i+1层的状态有关，而与其他层的状态无关。那么如果总是将层号增大，什么时候会到头呢？其实，数塔的最后一层的dp值总是等于元素本身，即dp[n][j]==f[n][j](1<=j<=n)，把这种可以直接确定其结果的部分称为边界，而动态规划的递推写法总是从这些边界出发，通过状态转移方程扩散到整个dp数组。
 
 这样就可以从最底层各位置的dp值开始，不断往上求出每一层各位置的dp值，最后就会得到dp[1][1]，即为想要的答案。
+
+### 动态规划的递推写法（代码） 
+```
+#include<cstdio>
+#include<algorithm>
+using namespace std;
+const int maxn=1000;
+int f[maxn][maxn],dp[maxn][maxn];
+int main(){
+  int n;
+  cin>>n;
+  for(int i=1;i<=n;i++){
+    for(int j=1;j<=I;j++){
+      cin>>f[i][j];
+    }      //输入数塔         
+  }
+  for(int j=1;j<=n;j++){
+    dp[n][j]=f[n][j];
+  }        //边界
+  for(int i=n-1;i>=1;i--){
+    for(int j=1;j<=i;j++){
+      dp[i][j]=max(dp[i+1][j],dp[i+1][j+1])+f[i][j];
+    }        //动态转移方程       
+  }
+  cout<<dp[1][1]<<endl;
+  return 0;
+}
+```
