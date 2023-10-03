@@ -23,3 +23,5 @@ int main(void) {
     cout << f[n] << endl;
     return 0;
 }
+
+// 凑零钱2，动态规划
