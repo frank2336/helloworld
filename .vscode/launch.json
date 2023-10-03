@@ -1,52 +1,28 @@
 {
   "version": "0.2.0",
   "configurations": [
+
     {
-      "name": "C/C++ Runner: Debug Session",
-      "type": "lldb",
-      "request": "launch",
-      "args": [],
-      "cwd": "/Users/frank/GitHub/helloworld/dynamic_programming",
-      "program": "/Users/frank/GitHub/helloworld/dynamic_programming/build/Debug/outDebug"
+      "name": "(lldb) Attach",
+      "type": "cppdbg",
+      "request": "attach",
+      "program": "${fileDirname}/build/${fileBasenameNoExtension}.exe",
+      "processId": "${command:pickProcess}",
+      "MIMode": "lldb",
+      "miDebuggerPath": "/usr/bin/lldb"
     },
     {
-      "name": "C/C++: clang++ build and debug active file",
+      "name": "g++ - Build and debug active file",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${fileDirname}/${fileBasenameNoExtension}",
+      "program": "${fileDirname}/build/${fileBasenameNoExtension}.exe",
       "args": [],
       "stopAtEntry": false,
       "cwd": "${fileDirname}",
       "environment": [],
-      "externalConsole": false,
+      "externalConsole": true,
       "MIMode": "lldb",
       "preLaunchTask": "C/C++: clang++ build active file"
-    },
-    {
-      "name": "C/C++: cpp build and debug active file",
-      "type": "cppdbg",
-      "request": "launch",
-      "program": "${fileDirname}/${fileBasenameNoExtension}",
-      "args": [],
-      "stopAtEntry": false,
-      "cwd": "${fileDirname}",
-      "environment": [],
-      "externalConsole": false,
-      "MIMode": "lldb",
-      "preLaunchTask": "C/C++: cpp build active file"
-    },
-    {
-      "name": "C/C++: clang build and debug active file",
-      "type": "cppdbg",
-      "request": "launch",
-      "program": "${fileDirname}/${fileBasenameNoExtension}",
-      "args": [],
-      "stopAtEntry": false,
-      "cwd": "${fileDirname}",
-      "environment": [],
-      "externalConsole": false,
-      "MIMode": "lldb",
-      "preLaunchTask": "C/C++: clang build active file"
     }
   ]
 }
