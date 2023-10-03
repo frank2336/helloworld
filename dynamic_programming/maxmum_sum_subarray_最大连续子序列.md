@@ -1,5 +1,5 @@
 # 最大子段和
-https://www.luogu.com.cn/record/127171112
+https://www.luogu.com.cn/problem/P1115
 
 ## 题目描述
 
@@ -40,3 +40,4 @@ https://www.luogu.com.cn/record/127171112
 
 - 对于 $40\%$ 的数据，保证 $n \leq 2 \times 10^3$。
 - 对于 $100\%$ 的数据，保证 $1 \leq n \leq 2 \times 10^5$，$-10^4 \leq a_i \leq 10^4$。
+
