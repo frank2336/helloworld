@@ -27,3 +27,5 @@ int main(void) {
     cout << dp[k] << endl;
     return 0;
 }
+
+// 最大连续子序列
