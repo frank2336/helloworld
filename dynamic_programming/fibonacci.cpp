@@ -3,7 +3,7 @@
 using namespace std;
 
 // int N 2^63;
-long long f[2^63];
+long long f[1ll<<20];
 
 long long fibonacci(int n)
 {
