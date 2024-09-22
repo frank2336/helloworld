@@ -9,3 +9,4 @@ dynamic_programming/build/Debug/outDebug
 build/Debug/outDebug
 .DS_Store
 *.exe
+*.dSYM
